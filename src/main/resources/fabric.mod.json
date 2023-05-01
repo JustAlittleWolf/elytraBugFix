@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "fixelytrabug",
+  "version": "${version}",
+  "name": "FixElytraBug",
+  "description": "",
+  "authors": ["JustAlittleWolf"],
+  "contact": {
+    "repo": "https://github.com/JustAlittleWolf/elytraBugFix"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/fixelytrabug/icon.png",
+  "environment": "client",
+  "entrypoints": {  },
+  "mixins": [
+    "fixelytrabug.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
