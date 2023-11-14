@@ -6,7 +6,7 @@
   "description": "Fixes spamming space when running in 2 block high corridors",
   "authors": ["JustAlittleWolf"],
   "contact": {
-    "repo": "https://github.com/JustAlittleWolf/elytraBugFix"
+    "sources": "https://github.com/JustAlittleWolf/elytraBugFix"
   },
   "license": "GPL-3.0",
   "icon": "assets/fixelytrabug/icon.png",
