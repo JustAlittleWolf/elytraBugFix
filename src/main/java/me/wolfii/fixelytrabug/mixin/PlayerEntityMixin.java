@@ -2,6 +2,7 @@ package me.wolfii.fixelytrabug.mixin;
 
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -19,6 +20,7 @@ public class PlayerEntityMixin {
         }
     }
 
+    @Unique
     private boolean doesCollideY(double offsetY) {
         return !((PlayerEntity) (Object) this).doesNotCollide(0, offsetY, 0);
     }

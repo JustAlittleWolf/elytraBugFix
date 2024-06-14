@@ -16,7 +16,7 @@
     "fixelytrabug.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
-    "minecraft": "1.20.x"
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21"
   }
 }
