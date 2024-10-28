@@ -9,10 +9,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
-    @Inject(method = "checkFallFlying", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "checkGliding", at = @At("HEAD"), cancellable = true)
     private void injectedStartFallFlying(CallbackInfoReturnable<Boolean> cir) {
         if (((PlayerEntity) (Object) this).isSneaking()) return;
-        if (((PlayerEntity) (Object) this).isFallFlying()) return;
+        if (((PlayerEntity) (Object) this).isGliding()) return;
         double offset = 4.0 / 16.0;
         if (((PlayerEntity) (Object) this).isSprinting()) offset = 12.0 / 16.0;
         if (this.doesCollideY(offset) && this.doesCollideY(-offset)) {
