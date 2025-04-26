@@ -7,12 +7,14 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+@SuppressWarnings("DataFlowIssue")
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
     @Inject(method = "checkGliding", at = @At("HEAD"), cancellable = true)
     private void injectedStartFallFlying(CallbackInfoReturnable<Boolean> cir) {
         if (((PlayerEntity) (Object) this).isSneaking()) return;
         if (((PlayerEntity) (Object) this).isGliding()) return;
+        if (((PlayerEntity) (Object) this).isInLava()) return;
         double offset = 4.0 / 16.0;
         if (((PlayerEntity) (Object) this).isSprinting()) offset = 12.0 / 16.0;
         if (this.doesCollideY(offset) && this.doesCollideY(-offset)) {
