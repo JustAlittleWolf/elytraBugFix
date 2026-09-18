@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "fixelytrabug",
   "version": "${version}",
-  "name": "FixElytraBug",
+  "name": "Fix Elytra Bug",
   "description": "Fixes spamming space when running in 2 block high corridors",
   "authors": ["JustAlittleWolf"],
   "contact": {
